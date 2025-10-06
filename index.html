@@ -1,317 +1,256 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Zambrzycki Auto Center — Tecnologia, Confiança e Performance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0b0f1a;
-            --accent: #ffb300;
-            --muted: #94a3b8;
-            font-family: 'Inter', sans-serif;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zambrzycki Auto Center — Oficina Mecânica em Ponta Grossa, PR</title>
 
-        body {
-            margin: 0;
-            background: var(--bg);
-            color: #e6eef8;
-            line-height: 1.6;
-            scroll-behavior: smooth
-        }
+  <!-- SEO e Open Graph -->
+  <meta name="description" content="Zambrzycki Auto Center — Oficina mecânica completa em Uvaranas, Ponta Grossa. Revisões, diagnósticos eletrônicos, freios, embreagem, câmbio e manutenção preventiva. Atendimento rápido e garantia total." />
+  <meta name="keywords" content="oficina mecânica Ponta Grossa, mecânico Uvaranas, revisão automotiva, manutenção de carro, Zambrzycki Auto Center, câmbio, freios, suspensão, troca de óleo, diagnóstico eletrônico" />
+  <meta name="author" content="Zambrzycki Auto Center" />
+  <meta name="geo.region" content="BR-PR" />
+  <meta name="geo.placename" content="Ponta Grossa" />
+  <meta name="geo.position" content="-25.0986;-50.1576" />
+  <meta name="ICBM" content="-25.0986, -50.1576" />
 
-        header {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 40px 20px;
-            text-align: center
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zambrzycki Auto Center — Oficina Mecânica em Ponta Grossa, PR" />
+  <meta property="og:description" content="Oficina moderna com diagnóstico eletrônico, manutenção completa e atendimento personalizado em Uvaranas, Ponta Grossa." />
+  <meta property="og:image" content="https://github.com/Willy71/oficina/blob/main/pictures/image.jpg?raw=true" />
+  <meta property="og:url" content="https://zambrzycki.onrender.com" />
+  <meta property="og:type" content="website" />
 
-        header img {
-            width: 400px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6)
-        }
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Zambrzycki Auto Center — Mecânica de Confiança em Ponta Grossa" />
+  <meta name="twitter:description" content="Cuidamos do seu carro como se fosse nosso. Tecnologia, confiança e performance." />
+  <meta name="twitter:image" content="https://github.com/Willy71/oficina/blob/main/pictures/image.jpg?raw=true" />
 
-        header h1 {
-            font-size: 2rem;
-            margin: 16px 0 4px;
-            color: var(--accent)
-        }
+  <!-- Dados estruturados (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Zambrzycki Auto Center",
+    "image": "https://github.com/Willy71/oficina/blob/main/pictures/image.jpg?raw=true",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Nicolau Florenzano, 608",
+      "addressLocality": "Ponta Grossa",
+      "addressRegion": "PR",
+      "postalCode": "84030-450",
+      "addressCountry": "BR"
+    },
+    "telephone": "+55 (42) 99999-9999",
+    "openingHours": "Mo-Fr 08:00-18:00, Sa 08:00-12:00",
+    "url": "https://zambrzycki.onrender.com",
+    "priceRange": "$$",
+    "description": "Oficina mecânica moderna e completa em Ponta Grossa, especializada em diagnóstico eletrônico, revisões, freios, câmbio e ar-condicionado automotivo."
+  }
+  </script>
 
-        header p {
-            color: var(--muted);
-            margin: 0
-        }
-
-        section {
-            max-width: 950px;
-            margin: 80px auto;
-            padding: 0 20px
-        }
-
-        h2 {
-            color: var(--accent);
-            font-size: 1.6rem;
-            margin-bottom: 10px
-        }
-
-        .muted {
-            color: var(--muted)
-        }
-
-        .grid {
-            display: grid;
-            gap: 20px
-        }
-
-        .grid-2 {
-            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr))
-        }
-
-        .grid-3 {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 20px;
-            border-radius: 12px
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 18px
-        }
-
-        li {
-            margin: 8px 0
-        }
-
-        footer {
-            text-align: center;
-            color: var(--muted);
-            font-size: 14px;
-            margin: 60px 0
-        }
-
-        a.btn {
-            display: inline-block;
-            margin-top: 14px;
-            padding: 10px 18px;
-            background: var(--accent);
-            color: #000;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 8px
-        }
-
-        a.btn:hover {
-            background: #ffd54f
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px)
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0)
-            }
-        }
-
-        section {
-            animation: fadeIn 1s ease
-        }
-    </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --accent:#ffb300;
+      --muted:#94a3b8;
+      font-family:'Inter',sans-serif;
+    }
+    body{margin:0;background:var(--bg);color:#e6eef8;line-height:1.6;scroll-behavior:smooth}
+    header{background:rgba(0,0,0,0.4);padding:40px 20px;text-align:center}
+    header img{width:350px;border-radius:16px;box-shadow:0 0 10px rgba(0,0,0,0.6)}
+    header h1{font-size:2rem;margin:16px 0 4px;color:var(--accent)}
+    header p{color:var(--muted);margin:0}
+    section{max-width:950px;margin:80px auto;padding:0 20px}
+    h2{color:var(--accent);font-size:1.6rem;margin-bottom:10px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:20px}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}
+    .grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .card{background:rgba(255,255,255,0.03);padding:20px;border-radius:12px}
+    ul{margin:0;padding-left:18px}
+    li{margin:8px 0}
+    footer{text-align:center;color:var(--muted);font-size:14px;margin:60px 0}
+    a.btn{display:inline-block;margin-top:14px;padding:10px 18px;background:var(--accent);color:#000;text-decoration:none;font-weight:700;border-radius:8px}
+    a.btn:hover{background:#ffd54f}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    section{animation:fadeIn 1s ease}
+  </style>
 </head>
-
 <body>
-    <header>
-        <img src="https://github.com/Willy71/oficina/blob/main/pictures/image.jpg?raw=true"
-            alt="Logo Zambrzycki Auto Center">
-        <h1>Zambrzycki Auto Center</h1>
-        <p>Tecnologia, Confiança e Performance</p>
-        <p>Cuidamos do seu carro como se fosse nosso.</p>
-    </header>
+  <header>
+    <img src="https://github.com/Willy71/oficina/blob/main/pictures/image.jpg?raw=true" alt="Logo Zambrzycki Auto Center">
+    <h1>Zambrzycki Auto Center</h1>
+    <p>Tecnologia, Confiança e Performance</p>
+    <p>Cuidamos do seu carro como se fosse nosso.</p>
+  </header>
 
-    <section id="quem-somos">
-        <h2>Quem Somos</h2>
-        <p>Somos uma oficina moderna e inovadora, com foco em transparência, qualidade e atendimento personalizado. Com
-            anos de experiência no setor automotivo, oferecemos diagnósticos precisos, manutenção completa e soluções
-            que garantem o máximo desempenho e segurança do seu veículo.</p>
-        <p>Nossa missão é unir tecnologia de ponta com o cuidado artesanal que seu carro merece. Cada cliente recebe
-            atenção individualizada, porque entendemos que o veículo é parte da sua vida.</p>
-        <div class="grid grid-4 muted">
-            <div>⚡ Atendimento Rápido</div>
-            <div>🧰 Profissionais Qualificados</div>
-            <div>🔧 Equipamentos Modernos</div>
-            <div>✅ Garantia Total</div>
-        </div>
-    </section>
+  <section id="quem-somos">
+    <h2>Quem Somos</h2>
+    <p>Somos uma oficina moderna e inovadora, com foco em transparência, qualidade e atendimento personalizado. Com anos de experiência no setor automotivo, oferecemos diagnósticos precisos, manutenção completa e soluções que garantem o máximo desempenho e segurança do seu veículo.</p>
+    <p>Nossa missão é unir tecnologia de ponta com o cuidado artesanal que seu carro merece. Cada cliente recebe atenção individualizada, porque entendemos que o veículo é parte da sua vida.</p>
+    <div class="grid grid-4 muted">
+      <div>⚡ Atendimento Rápido</div>
+      <div>🧰 Profissionais Qualificados</div>
+      <div>🔧 Equipamentos Modernos</div>
+      <div>✅ Garantia Total</div>
+    </div>
+  </section>
 
-    <section id="servicos">
-        <h2>Serviços que Mantêm seu Carro em Perfeita Forma</h2>
-        <div class="grid grid-3">
-            <div class="card">
-                <h3>Revisão Completa</h3>
-                <p>Manutenção preventiva detalhada para garantir a longevidade do seu veículo.</p>
-            </div>
-            <div class="card">
-                <h3>Troca de Óleo e Filtros</h3>
-                <p>Lubrificação adequada e produtos de alta qualidade para máxima performance do motor.</p>
-            </div>
-            <div class="card">
-                <h3>Suspensão e Freios</h3>
-                <p>Segurança e conforto em cada trajeto, com peças certificadas e mão de obra especializada.</p>
-            </div>
-            <div class="card">
-                <h3>Embreagem e Câmbio</h3>
-                <p>Reparo e substituição de sistemas de transmissão com garantia total.</p>
-            </div>
-            <div class="card">
-                <h3>Injeção Eletrônica</h3>
-                <p>Diagnóstico computadorizado e correção precisa de falhas eletrônicas.</p>
-            </div>
-            <div class="card">
-                <h3>Ar-Condicionado</h3>
-                <p>Manutenção, higienização e recarga para máximo conforto térmico.</p>
-            </div>
-        </div>
-    </section>
+  <section id="servicos">
+    <h2>Serviços que Mantêm seu Carro em Perfeita Forma</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Revisão Completa</h3>
+        <p>Manutenção preventiva detalhada para garantir a longevidade do seu veículo.</p>
+      </div>
+      <div class="card">
+        <h3>Troca de Óleo e Filtros</h3>
+        <p>Lubrificação adequada e produtos de alta qualidade para máxima performance do motor.</p>
+      </div>
+      <div class="card">
+        <h3>Suspensão e Freios</h3>
+        <p>Segurança e conforto em cada trajeto, com peças certificadas e mão de obra especializada.</p>
+      </div>
+      <div class="card">
+        <h3>Embreagem e Câmbio</h3>
+        <p>Reparo e substituição de sistemas de transmissão com garantia total.</p>
+      </div>
+      <div class="card">
+        <h3>Injeção Eletrônica</h3>
+        <p>Diagnóstico computadorizado e correção precisa de falhas eletrônicas.</p>
+      </div>
+      <div class="card">
+        <h3>Ar-Condicionado</h3>
+        <p>Manutenção, higienização e recarga para máximo conforto térmico.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="inovadores">
-        <h2>Soluções Inovadoras que Fazem Diferença</h2>
-        <div class="grid grid-2">
-            <div class="card">
-                <h3>Check-up Eletrônico Digital</h3>
-                <p>Relatório completo em PDF enviado por WhatsApp, com fotos e laudo técnico. Transparência total na
-                    palma da sua mão.</p>
-            </div>
-            <div class="card">
-                <h3>Plano de Manutenção Inteligente</h3>
-                <p>Mensalidade acessível que garante revisões periódicas com descontos exclusivos. Mantenha seu carro
-                    sempre em dia.</p>
-            </div>
-            <div class="card">
-                <h3>Serviço Leva e Traz</h3>
-                <p>Buscamos e entregamos seu veículo, garantindo praticidade e economia de tempo.</p>
-            </div>
-            <div class="card">
-                <h3>Pit Stop Express</h3>
-                <p>Revisão rápida completa em até 1 hora: óleo, filtros, pneus, freios e níveis verificados.</p>
-            </div>
-            <div class="card">
-                <h3>Laudo Técnico Personalizado</h3>
-                <p>Perfeito para quem vai comprar ou vender o carro. Avaliação profissional e confiável.</p>
-            </div>
-            <div class="card">
-                <h3>Diagnóstico por Vídeo</h3>
-                <p>Receba um vídeo explicativo mostrando exatamente o problema detectado antes de aprovar o serviço.</p>
-            </div>
-        </div>
-    </section>
+  <section id="inovadores">
+    <h2>Soluções Inovadoras que Fazem Diferença</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Check-up Eletrônico Digital</h3>
+        <p>Relatório completo em PDF enviado por WhatsApp, com fotos e laudo técnico. Transparência total na palma da sua mão.</p>
+      </div>
+      <div class="card">
+        <h3>Plano de Manutenção Inteligente</h3>
+        <p>Mensalidade acessível que garante revisões periódicas com descontos exclusivos. Mantenha seu carro sempre em dia.</p>
+      </div>
+      <div class="card">
+        <h3>Serviço Leva e Traz</h3>
+        <p>Buscamos e entregamos seu veículo, garantindo praticidade e economia de tempo.</p>
+      </div>
+      <div class="card">
+        <h3>Pit Stop Express</h3>
+        <p>Revisão rápida completa em até 1 hora: óleo, filtros, pneus, freios e níveis verificados.</p>
+      </div>
+      <div class="card">
+        <h3>Laudo Técnico Personalizado</h3>
+        <p>Perfeito para quem vai comprar ou vender o carro. Avaliação profissional e confiável.</p>
+      </div>
+      <div class="card">
+        <h3>Diagnóstico por Vídeo</h3>
+        <p>Receba um vídeo explicativo mostrando exatamente o problema detectado antes de aprovar o serviço.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="promocoes">
-        <h2>Promoções que Aceleram sua Economia</h2>
-        <div class="grid grid-2">
-            <div class="card">
-                <h3>Troca de Óleo Premiada</h3>
-                <p>A cada 5 trocas, a próxima é gratuita. Economize cuidando bem do seu carro.</p>
-            </div>
-            <div class="card">
-                <h3>Indique e Ganhe</h3>
-                <p>Indique um amigo e ganhe 10% de desconto na próxima visita — válido para ambos.</p>
-            </div>
-            <div class="card">
-                <h3>Semana do Motorista</h3>
-                <p>Check-up gratuito de 20 itens essenciais para o seu carro.</p>
-            </div>
-            <div class="card">
-                <h3>Desconto Profissional</h3>
-                <p>Condições especiais para motoristas de aplicativo e frotistas.</p>
-            </div>
-        </div>
-    </section>
+  <section id="promocoes">
+    <h2>Promoções que Aceleram sua Economia</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Troca de Óleo Premiada</h3>
+        <p>A cada 5 trocas, a próxima é gratuita. Economize cuidando bem do seu carro.</p>
+      </div>
+      <div class="card">
+        <h3>Indique e Ganhe</h3>
+        <p>Indique um amigo e ganhe 10% de desconto na próxima visita — válido para ambos.</p>
+      </div>
+      <div class="card">
+        <h3>Semana do Motorista</h3>
+        <p>Check-up gratuito de 20 itens essenciais para o seu carro.</p>
+      </div>
+      <div class="card">
+        <h3>Desconto Profissional</h3>
+        <p>Condições especiais para motoristas de aplicativo e frotistas.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="vantagens">
-        <h2>Por Que Escolher a Zambrzycki Auto Center?</h2>
+  <section id="vantagens">
+    <h2>Por Que Escolher a Zambrzycki Auto Center?</h2>
+    <ul>
+      <li>Transparência total — você vê tudo o que é feito no seu carro</li>
+      <li>Orçamento sem surpresas e preço justo</li>
+      <li>Atendimento digital via WhatsApp e agendamento online</li>
+      <li>Pontualidade e compromisso com o prazo</li>
+      <li>Garantia de serviço em todas as manutenções</li>
+      <li>Atendimento personalizado — cada cliente é único</li>
+    </ul>
+  </section>
+
+  <section id="pagamento">
+    <h2>Pagamento Fácil e Flexível</h2>
+    <div class="grid grid-2">
+      <div class="card">
         <ul>
-            <li>Transparência total — você vê tudo o que é feito no seu carro</li>
-            <li>Orçamento sem surpresas e preço justo</li>
-            <li>Atendimento digital via WhatsApp e agendamento online</li>
-            <li>Pontualidade e compromisso com o prazo</li>
-            <li>Garantia de serviço em todas as manutenções</li>
-            <li>Atendimento personalizado — cada cliente é único</li>
+          <li>Cartões de crédito e débito</li>
+          <li>Pix e transferência bancária</li>
+          <li>Parcelamento em até 6x sem juros</li>
+          <li>Desconto especial para pagamento à vista</li>
         </ul>
-    </section>
+      </div>
+      <div class="card">
+        <p>Para empresas e frotas, oferecemos condições especiais e contratos personalizados. Consulte nossas opções e garanta o melhor custo-benefício.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="pagamento">
-        <h2>Pagamento Fácil e Flexível</h2>
-        <div class="grid grid-2">
-            <div class="card">
-                <ul>
-                    <li>Cartões de crédito e débito</li>
-                    <li>Pix e transferência bancária</li>
-                    <li>Parcelamento em até 6x sem juros</li>
-                    <li>Desconto especial para pagamento à vista</li>
-                </ul>
-            </div>
-            <div class="card">
-                <p>Para empresas e frotas, oferecemos condições especiais e contratos personalizados. Consulte nossas
-                    opções e garanta o melhor custo-benefício.</p>
-            </div>
-        </div>
-    </section>
+  <section id="clientes">
+    <h2>Clientes Satisfeitos, Nossa Melhor Propaganda</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <p><em>“Melhor oficina que já conheci! Transparência total, preço justo e trabalho impecável.”</em></p>
+        <p class="muted">— Carlos Silva, Revisão Completa</p>
+      </div>
+      <div class="card">
+        <p><em>“O serviço de leva e traz foi uma mão na roda! Recebi relatório digital com fotos de tudo que foi feito.”</em></p>
+        <p class="muted">— Marina Oliveira, Check-up Eletrônico</p>
+      </div>
+      <div class="card">
+        <p><em>“Sou motorista de aplicativo e o desconto profissional fez toda diferença. Prazo cumprido e atendimento impecável.”</em></p>
+        <p class="muted">— Roberto Mendes, Plano Preventivo</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="clientes">
-        <h2>Clientes Satisfeitos, Nossa Melhor Propaganda</h2>
-        <div class="grid grid-2">
-            <div class="card">
-                <p><em>“Melhor oficina que já conheci! Transparência total, preço justo e trabalho impecável.”</em></p>
-                <p class="muted">— Carlos Silva, Revisão Completa</p>
-            </div>
-            <div class="card">
-                <p><em>“O serviço de leva e traz foi uma mão na roda! Recebi relatório digital com fotos de tudo que foi
-                        feito.”</em></p>
-                <p class="muted">— Marina Oliveira, Check-up Eletrônico</p>
-            </div>
-            <div class="card">
-                <p><em>“Sou motorista de aplicativo e o desconto profissional fez toda diferença. Prazo cumprido e
-                        atendimento impecável.”</em></p>
-                <p class="muted">— Roberto Mendes, Plano Preventivo</p>
-            </div>
-        </div>
-    </section>
+  <section id="inovacao">
+    <h2>Inovação Contínua para Você</h2>
+    <ul>
+      <li>Assinatura de Manutenção Preventiva</li>
+      <li>Histórico Digital do Veículo (via app ou site)</li>
+      <li>Relatórios com QR Code</li>
+      <li>Seguro de Manutenção Anual</li>
+      <li>Check-up Pós-Serviço gratuito (30 dias)</li>
+      <li>Parcerias com lava-rápido e estacionamentos</li>
+    </ul>
+    <p>Nossa missão é estar sempre um passo à frente, oferecendo não apenas serviços automotivos tradicionais, mas soluções completas que facilitam sua vida e valorizam seu investimento.</p>
+  </section>
 
-    <section id="inovacao">
-        <h2>Inovação Contínua para Você</h2>
-        <ul>
-            <li>Assinatura de Manutenção Preventiva</li>
-            <li>Histórico Digital do Veículo (via app ou site)</li>
-            <li>Relatórios com QR Code</li>
-            <li>Seguro de Manutenção Anual</li>
-            <li>Check-up Pós-Serviço gratuito (30 dias)</li>
-            <li>Parcerias com lava-rápido e estacionamentos</li>
-        </ul>
-        <p>Nossa missão é estar sempre um passo à frente, oferecendo não apenas serviços automotivos tradicionais, mas
-            soluções completas que facilitam sua vida e valorizam seu investimento.</p>
-    </section>
+  <section id="contato">
+    <h2>Contato e Localização</h2>
+    <p>📞 <strong>WhatsApp:</strong> (42) 99999-9999</p>
+    <p>📧 <strong>Email:</strong> contato@zambrzyckiautocenter.com.br</p>
+    <p>📍 <strong>Endereço:</strong> Rua Nicolau Florenzano, 608 – Bairro Uvaranas – Ponta Grossa – Paraná – Brasil</p>
+    <a class="btn" href="https://wa.me/5542999999999">Agende sua revisão</a>
+  </section>
 
-    <section id="contato">
-        <h2>Contato e Localização</h2>
-        <p>📞 <strong>WhatsApp:</strong> (42) 999636299</p>
-        <p>📧 <strong>Email:</strong> zambrzyckiautocenter@gmail.com</p>
-        <p>📍 <strong>Endereço:</strong> Rua Nicolau Florenzano, 608 – Uvaranas, Ponta Grossa – Paraná</p>
-        <a class="btn" href="https://wa.me/5542999636299">Agende sua revisão</a>
-    </section>
-
-    <footer>
-        © 2025 Zambrzycki Auto Center · Todos os direitos reservados
-    </footer>
+  <footer>
+    © 2025 Zambrzycki Auto Center · Todos os direitos reservados
+  </footer>
 </body>
-
 </html>
