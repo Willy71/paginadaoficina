@@ -79,34 +79,46 @@
           overflow-x: hidden;
         }
 
+        .payment-icons {
+            display: flex;
+            justify-content: flex-end; /* Mueve toda la lista a la derecha */
+        }
+        
         .payment-icons ul {
             list-style: none;
             padding: 0;
             margin: 0;
+            text-align: right; /* Alinea el texto dentro de cada li hacia la derecha */
         }
         
         .payment-icons li {
             display: flex;
-            align-items: center;      /* Mantiene ícono y texto en la misma línea */
-            justify-content: flex-start; /* Todo alineado a la izquierda */
-            gap: 10px;                /* Espacio uniforme entre ícono y texto */
+            align-items: center;
+            justify-content: flex-end; /* Ícono y texto van juntos a la derecha */
+            gap: 10px; /* Espacio uniforme entre texto e ícono */
             margin-bottom: 12px;
         }
         
         .payment-icons li img {
             width: 36px;
             height: 36px;
-            object-fit: contain;      /* Mantiene proporciones de los íconos */
-            flex-shrink: 0;           /* Evita que los íconos se achiquen */
+            object-fit: contain;
+            flex-shrink: 0;
         }
         
-        /* Responsivo para celular */
+        /* Responsivo: centra todo en pantallas pequeñas */
         @media (max-width: 768px) {
+            .payment-icons {
+                justify-content: center;
+            }
+            .payment-icons ul {
+                text-align: center;
+            }
             .payment-icons li {
-                justify-content: center; /* Centra íconos + texto en celular */
-                text-align: left;
+                justify-content: center;
             }
         }
+
 
           nav a {
             padding: 4px 6px;
