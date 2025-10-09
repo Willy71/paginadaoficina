@@ -178,7 +178,7 @@
           box-shadow:0 6px 18px rgba(0,0,0,0.4);
         }
 
-        /* Estilo para las nuevas imágenes (responsivas por defecto) */
+        /* Estilo para las nuevas imágenes */
         .section-image {
             width: 100%; 
             max-width: 600px; 
@@ -193,21 +193,6 @@
           header{ padding-top:120px }
           nav{ gap:14px }
           .grid-3{ grid-template-columns: 1fr }
-          /* MODIFICACIÓN PARA CENTRAR TODO EN CELULARES */
-          main section, main section p, main section h2, main section h3, main section ul, main section li {
-            text-align: center;
-            list-style-position: inside; 
-            padding-left: 0;
-          }
-          /* Asegura que los íconos de las tarjetas de pago se centren mejor */
-          .payment-icons ul {
-              list-style: none; /* Remueve los puntos si se usa list-style-position: inside; para centrado*/
-              padding-left: 0;
-          }
-          .payment-icons li {
-              display: inline-block;
-              text-align: left; /* Mantiene el texto de la lista de pago justificado si es necesario */
-          }
         }
     </style>
 </head>
