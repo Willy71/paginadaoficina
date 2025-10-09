@@ -80,6 +80,48 @@
           overflow-x: hidden;
         }
 
+        /* --- BLOQUE DE PAGAMENTO AJUSTADO --- */
+        .payment-icons {
+            display: flex;
+            justify-content: flex-end; /* Mueve toda la lista a la derecha */
+        }
+        
+        .payment-icons ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right; /* Alinea el texto dentro de cada li hacia la direita */
+        }
+        
+        .payment-icons li {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* Ícono y texto alineados a la derecha */
+            gap: 10px; /* Espacio uniforme entre texto e ícono */
+            margin-bottom: 12px;
+        }
+        
+        .payment-icons li img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+        
+        /* Responsivo: centra todo en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .payment-icons {
+                justify-content: center;
+            }
+            .payment-icons ul {
+                text-align: center;
+            }
+            .payment-icons li {
+                justify-content: center;
+            }
+        }
+
+
         /* Ajustes para móveis */
         @media (max-width: 600px) {
           header { padding-top: 120px; }
@@ -164,6 +206,7 @@
             </div>
         </div>
     </section>
+
 
     <section id="clientes">
       <h2>Clientes Satisfeitos, Nossa Melhor Propaganda</h2>
