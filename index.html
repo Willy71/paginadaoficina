@@ -80,34 +80,34 @@
         }
 
         .payment-icons ul {
-            list-style: none; /* Quita los bullets */
+            list-style: none;
             padding: 0;
             margin: 0;
         }
         
         .payment-icons li {
             display: flex;
-            align-items: center;
-            justify-content: flex-end; /* Empuja el texto hacia la derecha */
+            align-items: center;      /* Mantiene ícono y texto en la misma línea */
+            justify-content: flex-start; /* Todo alineado a la izquierda */
+            gap: 10px;                /* Espacio uniforme entre ícono y texto */
             margin-bottom: 12px;
         }
         
         .payment-icons li img {
-            width: 32px;
-            height: 32px;
-            margin-left: 10px; /* Ahora el espacio va a la izquierda del texto */
+            width: 36px;
+            height: 36px;
+            object-fit: contain;      /* Mantiene proporciones de los íconos */
+            flex-shrink: 0;           /* Evita que los íconos se achiquen */
+        }
+        
+        /* Responsivo para celular */
+        @media (max-width: 768px) {
+            .payment-icons li {
+                justify-content: center; /* Centra íconos + texto en celular */
+                text-align: left;
+            }
         }
 
-
-        /* Ajustes para móveis */
-        @media (max-width: 600px) {
-          header { padding-top: 120px; }
-          nav {
-            gap: 8px;
-            flex-wrap: wrap;
-            font-size: 14px;
-            padding: 8px;
-          }
           nav a {
             padding: 4px 6px;
           }
