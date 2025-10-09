@@ -79,47 +79,35 @@
           overflow-x: hidden;
         }
 
-        .payment-icons {
-            display: flex;
-            justify-content: flex-end; /* Mueve toda la lista a la derecha */
-        }
-        
         .payment-icons ul {
-            list-style: none;
+            list-style: none; /* Quita los bullets */
             padding: 0;
             margin: 0;
-            text-align: right; /* Alinea el texto dentro de cada li hacia la derecha */
         }
         
         .payment-icons li {
             display: flex;
             align-items: center;
-            justify-content: flex-end; /* Ícono y texto van juntos a la derecha */
-            gap: 10px; /* Espacio uniforme entre texto e ícono */
+            justify-content: flex-end; /* Empuja el texto hacia la derecha */
             margin-bottom: 12px;
         }
         
         .payment-icons li img {
-            width: 36px;
-            height: 36px;
-            object-fit: contain;
-            flex-shrink: 0;
-        }
-        
-        /* Responsivo: centra todo en pantallas pequeñas */
-        @media (max-width: 768px) {
-            .payment-icons {
-                justify-content: center;
-            }
-            .payment-icons ul {
-                text-align: center;
-            }
-            .payment-icons li {
-                justify-content: center;
-            }
+            width: 32px;
+            height: 32px;
+            margin-left: 10px; /* Ahora el espacio va a la izquierda del texto */
         }
 
 
+        /* Ajustes para móveis */
+        @media (max-width: 600px) {
+          header { padding-top: 120px; }
+          nav {
+            gap: 8px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            padding: 8px;
+          }
           nav a {
             padding: 4px 6px;
           }
