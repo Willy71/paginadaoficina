@@ -79,11 +79,21 @@
           overflow-x: hidden;
         }
 
-        /* Ajuste extra para grids no mobile */
+        /* Ajustes para móveis */
         @media (max-width: 600px) {
-          header{ padding-top:120px }
-          nav{ gap:14px }
-          .grid-2, .grid-3 { grid-template-columns: 1fr !important; }
+          header { padding-top: 120px; }
+          nav {
+            gap: 8px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            padding: 8px;
+          }
+          nav a {
+            padding: 4px 6px;
+          }
+          .grid-2, .grid-3 {
+            grid-template-columns: 1fr !important;
+          }
         }
     </style>
 </head>
